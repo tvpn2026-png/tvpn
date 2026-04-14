@@ -3,124 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T VPN 3D Download</title>
+    <title>T VPN & Mobile Packages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            /* 3D ဆန်သော နောက်ခံအရောင်ပြေး */
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: white;
-            padding: 20px;
         }
-
-        /* 3D Glass Card */
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 30px;
-            padding: 40px 25px;
+        .container {
             width: 100%;
-            max-width: 360px;
-            text-align: center;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
+            max-width: 450px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-
-        /* Logo 3D Effect */
-        .logo-container {
-            position: relative;
-            display: inline-block;
+        .logo-section {
+            text-align: center;
             margin-bottom: 20px;
         }
-
         .logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 25px;
-            object-fit: cover;
-            /* 3D Shadow */
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            transform: perspective(500px) rotateX(10deg);
+            width: 100px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
-        h1 {
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
-        }
-
-        p {
+        .package-title {
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 15px 0 10px 0;
+            font-weight: bold;
+            text-align: center;
             font-size: 14px;
-            opacity: 0.8;
-            margin-bottom: 35px;
-            line-height: 1.6;
         }
+        .bg-dtac { background-color: #00b0f0; }
+        .bg-ais { background-color: #92d050; }
 
-        /* 3D Button Style */
+        .package-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            border: 1px solid #eee;
+        }
+        .code {
+            font-weight: bold;
+            color: #333;
+            display: block;
+        }
+        .price {
+            font-size: 13px;
+            color: #666;
+        }
+        .call-btn {
+            background-color: #28a745;
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
         .download-btn {
             display: block;
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(to bottom, #2ecc71, #27ae60);
+            background: linear-gradient(to bottom, #28a745, #218838);
             color: white;
+            text-align: center;
+            padding: 18px;
             text-decoration: none;
+            border-radius: 15px;
             font-weight: bold;
             font-size: 18px;
-            border-radius: 15px;
-            position: relative;
-            /* ခလုတ်ကို 3D ဖောင်းကြွဖြစ်စေရန် */
-            border-bottom: 5px solid #1e8449;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.1s;
-        }
-
-        /* ခလုတ်နှိပ်လိုက်ရင် ချိုင့်ဝင်သွားတဲ့ 3D Effect */
-        .download-btn:active {
-            transform: translateY(4px);
-            border-bottom-width: 1px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .version-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 12px;
             margin-top: 25px;
+            border-bottom: 5px solid #19692c;
+            transition: 0.2s;
+        }
+        .download-btn:active {
+            transform: translateY(3px);
+            border-bottom-width: 2px;
+        }
+        .footer-text {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="logo-container">
-            <img src="https://raw.githubusercontent.com/tvpn2026-png/tvpn/refs/heads/main/tvp.png" alt="T VPN" class="logo">
-        </div>
-
-        <h1>T VPN</h1>
-        <p>နောက်ဆုံးထွက်ဗားရှင်းကို ရယူပါ</p>
-
-        <a href="https://github.com/tvpn2026-png/tvpn/releases/download/apk/com.t.vip.vpn-1.2-release.apk" class="download-btn" download>
-            DOWNLOAD APK
-        </a>
-
-        <div class="version-tag">Version 1.0.23 (Latest)</div>
+<div class="container">
+    <div class="logo-section">
+        <img src="https://raw.githubusercontent.com/tvpn2026-png/tvpn/refs/heads/main/tvp.png" alt="T VPN Logo" class="logo">
+        <h2 style="margin:10px 0 5px 0;">T VPN</h2>
     </div>
+
+    <div class="package-title bg-dtac">DTAC-ကျိုင်ဒီအရံနက်UDPစမတ်အတွက်⬇⬇⬇</div>
+    <div class="package-item">
+        <div>
+            <span class="code">*117*15#</span>
+            <span class="price">၁၅ ရက်စာ (၁၅ ဘတ်)</span>
+        </div>
+        <a href="tel:*117*15%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+    <div class="package-item">
+        <div>
+            <span class="code">*117*30#</span>
+            <span class="price">၃၀ ရက်စာ (၃၀ ဘတ်)</span>
+        </div>
+        <a href="tel:*117*30%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+
+    <div class="package-title bg-ais">AIS-Easyပလန်ချိန်းပေးပါ⬇⬇⬇</div>
+    <div class="package-item">
+        <div>
+            <span class="code">*777*44#</span>
+            <span class="price">ကိုယ်-ကဒ်အသစ်သုံးတယ်ဆိုရင်</span>
+        </div>
+        <a href="tel:*777*44%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+    <div class="package-item">
+        <div>
+            <span class="code">*777*1043#</span>
+            <span class="price">ကိုယ်-ကဒ်အဟောင်းသုံးတယ်ဆိုရင်</span>
+        </div>
+        <a href="tel:*777*1043%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+
+    <div class="package-title bg-ais">AIS-64Kbpsစမတ်အတွက်⬇⬇⬇</div>
+    <div class="package-item">
+        <div>
+            <span class="code">*777*7067#</span>
+            <span class="price">၃၀ ရက်စာ (၃၀ ဘတ်)</span>
+        </div>
+        <a href="tel:*777*7067%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+    <div class="package-item">
+        <div>
+            <span class="code">*777*7068#</span>
+            <span class="price">၃၀ ရက်စာ (၃၃ ဘတ်)</span>
+        </div>
+        <a href="tel:*777*7068%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+     <div class="package-title bg-ais">True Instagramစမတ်အတွက်⬇⬇⬇</div>
+    <div class="package-item">
+        <div>
+            <span class="code">*900*3515#</span>
+            <span class="price">၃၀ ရက်စာ (၅၄ ဘတ်)</span>
+        </div>
+        <a href="tel:*900*3515#%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+    <div class="package-title bg-ais">True Instagramစမတ်အတွက်⬇⬇⬇</div>
+    <div class="package-item">
+        <div>
+            <span class="code">*900*3515#</span>
+            <span class="price">၃၀ ရက်စာ (၅၄ ဘတ်)</span>
+        </div>
+        <a href="tel:*900*3515#%23" class="call-btn"><i class="fas fa-phone-alt"></i></a>
+    </div>
+
+    <a href="https://github.com/tvpn2026-png/tvpn/releases/download/apk/com.t.vip.vpn-1.2-release.apk" class="download-btn" download>
+        <i class="fas fa-download"></i> T VPN APK ဒေါင်းလုဒ်လုပ်ရန်
+    </a>
+
+    <div class="footer-text">© 2026 T VPN. All rights reserved.</div>
+</div>
 
 </body>
 </html>
