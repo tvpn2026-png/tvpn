@@ -1,65 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="my">
 <head>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 40px;
-    background-color: #f4f4f9;
-  }
-  
-  /* Logo ဒီဇိုင်း */
-  .logo {
-    width: 120px; /* Logo အရွယ်အစား */
-    height: auto;
-    border-radius: 20px; /* ထောင့်လေးတွေ နည်းနည်းဝိုင်းအောင် */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T VPN 3D Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* ခေါင်းစဉ် ဒီဇိုင်း */
-  h1 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    color: #666;
-    margin-bottom: 30px;
-  }
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* 3D ဆန်သော နောက်ခံအရောင်ပြေး */
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+        }
 
-  /* ဒေါင်းလုဒ်ခလုတ် ဒီဇိုင်း */
-  .download-btn {
-    background-color: #28a745; 
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 50px;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
+        /* 3D Glass Card */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 40px 25px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
 
-  .download-btn:hover {
-    background-color: #218838;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    transform: translateY(-2px);
-  }
-</style>
+        /* Logo 3D Effect */
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            object-fit: cover;
+            /* 3D Shadow */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            transform: perspective(500px) rotateX(10deg);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        /* 3D Button Style */
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(to bottom, #2ecc71, #27ae60);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 15px;
+            position: relative;
+            /* ခလုတ်ကို 3D ဖောင်းကြွဖြစ်စေရန် */
+            border-bottom: 5px solid #1e8449;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.1s;
+        }
+
+        /* ခလုတ်နှိပ်လိုက်ရင် ချိုင့်ဝင်သွားတဲ့ 3D Effect */
+        .download-btn:active {
+            transform: translateY(4px);
+            border-bottom-width: 1px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .version-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+    </style>
 </head>
 <body>
 
-  <img src="https://raw.githubusercontent.com/tvpn2026-png/tvpn/refs/heads/main/tvp.png" alt="T VPN Logo" class="logo">
+    <div class="card">
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/tvpn2026-png/tvpn/refs/heads/main/tvp.png" alt="T VPN" class="logo">
+        </div>
 
-  <h1>T VPN App</h1>
-  <p>နောက်ဆုံးထွက် Version ကို အောက်က Button ကိုနှိပ်၍ ရယူပါ</p>
+        <h1>T VPN</h1>
+        <p>နောက်ဆုံးထွက်ဗားရှင်းကို ရယူပါ</p>
 
-  <a href="https://github.com/tvpn2026-png/tvpn/releases/download/apk/com.t.vip.vpn-1.2-release.apk" class="download-btn" download>
-    T VPN APK Download
-  </a>
+        <a href="https://github.com/tvpn2026-png/tvpn/releases/download/apk/com.t.vip.vpn-1.2-release.apk" class="download-btn" download>
+            DOWNLOAD APK
+        </a>
+
+        <div class="version-tag">Version 1.0.23 (Latest)</div>
+    </div>
 
 </body>
 </html>
