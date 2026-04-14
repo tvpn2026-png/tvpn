@@ -5,45 +5,60 @@
   body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
     background-color: #f4f4f9;
   }
+  
+  /* Logo ဒီဇိုင်း */
+  .logo {
+    width: 120px; /* Logo အရွယ်အစား */
+    height: auto;
+    border-radius: 20px; /* ထောင့်လေးတွေ နည်းနည်းဝိုင်းအောင် */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
   /* ခေါင်းစဉ် ဒီဇိုင်း */
   h1 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
+  
   p {
     color: #666;
     margin-bottom: 30px;
   }
+
   /* ဒေါင်းလုဒ်ခလုတ် ဒီဇိုင်း */
   .download-btn {
-    background-color: #28a745; /* အစိမ်းရောင် */
+    background-color: #28a745; 
     color: white;
     padding: 15px 35px;
     text-decoration: none;
-    border-radius: 50px; /* ခလုတ်ကို ဝိုင်းဝိုင်းလေးဖြစ်အောင် */
+    border-radius: 50px;
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
     transition: 0.3s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
+
   .download-btn:hover {
     background-color: #218838;
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    transform: translateY(-2px); /* Mouse တင်ရင် အပေါ်နည်းနည်းကြွတက်မယ် */
+    transform: translateY(-2px);
   }
 </style>
 </head>
 <body>
 
-  <h1>T VPN Application</h1>
-  <p>နောက်ဆုံးထွက် Version ကို အောက်ပါ Button ကိုနှိပ်၍ အခမဲ့ရယူပါ</p>
+  <img src="https://raw.githubusercontent.com/tvpn2026-png/tvpn/refs/heads/main/tvp.png" alt="T VPN Logo" class="logo">
+
+  <h1>T VPN App</h1>
+  <p>နောက်ဆုံးထွက် Version ကို အောက်က Button ကိုနှိပ်၍ ရယူပါ</p>
 
   <a href="https://github.com/tvpn2026-png/tvpn/releases/download/apk/com.t.vip.vpn-1.2-release.apk" class="download-btn" download>
-    T VPN APK ဒေါင်းလုဒ်လုပ်ရန်
+    T VPN APK Download
   </a>
 
 </body>
