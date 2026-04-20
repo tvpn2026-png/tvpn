@@ -1,82 +1,247 @@
-            border-radius: 50%;
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Shop - DTAC / AIS / TRUE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pyidaungsu', 'Myanmar Text', sans-serif;
+        }
+        body {
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .package {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 5px solid #ccc;
+        }
+        .dtac { border-left-color: #0066CC; }
+        .true { border-left-color: #E60012; }
+        .ais { border-left-color: #B4D335; }
+        
+        .package-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-
-        /* Operator Colors */
-        .txt-dtac { color: #00ffff; border-left-color: #00ffff; }
-        .txt-true { color: #ff4d4d; border-left-color: #ff4d4d; }
-        .txt-ais { color: #adff2f; border-left-color: #adff2f; }
-
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .dot-dtac { background: #0066CC; }
+        .dot-true { background: #E60012; }
+        .dot-ais { background: #B4D335; }
+        
+        .steps {
+            margin: 12px 0;
+            padding-left: 10px;
+        }
+        .steps li {
+            margin-bottom: 6px;
+        }
+        .price {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .order-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .order-btn:hover {
+            background: #1da851;
+            transform: translateY(-1px);
+        }
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>DTAC / AIS / TRUE (VPN Shop)</h1>
+            <p>စျေးနှုန်းနှင့် အသုံးပြုပုံအညွှန်း</p>
+        </header>
 
-<div class="container">
-    <div class="card">
-        <img src="https://raw.githubusercontent.com/tvpn2026-png/tvpn/refs/heads/main/tvp.png" alt="T VPN" class="logo">
-        <h1>T VPN</h1>
-        <p class="sub-text">T VPN VIP 1လ 50ဘတ်  </p>
-
-        <a href="https://github.com/tvpn2026-png/tvpn/releases/download/apk/com.t.vip.vpn-1.2-release.apk" class="download-btn" download>
-            <i class="fas fa-download"></i> DOWNLOAD APK
-        </a>
-        <span style="font-size: 11px; opacity: 0.6;">Version 1.0.23 (Latest)</span>
-    </div>
-
-    <div class="pkg-group-title txt-dtac">🔵 DTAC PACKAGES</div>
-    <div class="pkg-card">
-        <div class="pkg-info">
-            <b>DTAC GAMING ပကေ့</b>
-            <span>3လစာ (61 ဘတ်) - App တွင်ဝယ်ပါ</span>
+        <div class="package dtac">
+            <div class="package-title">
+                <span class="dot dot-dtac"></span>DTAC GAMING ပကေ့
+            </div>
+            <ul class="steps">
+                <li>ဒီတက် App မှာ ပကေ့ဂျ် ဝင်ဝယ်ယူပါ</li>
+                <li>3လစာ ဖုန်းဘေ 61ဘတ် ကုန်ကျမည်</li>
+                <li>Net Mod VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ Net Mod VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
         </div>
-        <i class="fas fa-gamepad" style="color:#00ffff;"></i>
-    </div>
-    <div class="pkg-card">
-        <div class="pkg-info">
-            <b>DTAC အရံနက် 64 Kbps</b>
-            <span>ဖုန်းဘေ 30 ထည့်ပြီး (*117*30#) နိပ်စမတ်ပါ</span>
+
+        <div class="package dtac">
+            <div class="package-title">
+                <span class="dot dot-dtac"></span>DTAC ကျိုင်ဒီအရံနက် 64 Kbps
+            </div>
+            <ul class="steps">
+                <li>ဖုန်းဘေ 30 ထည့်ပါ</li>
+                <li><code>*117*30#</code> နှိပ်ပြီး စမတ်ပါ</li>
+                <li>ZI VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ ZI VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
         </div>
-        <a href="tel:*117*30%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
+
+        <div class="package true">
+            <div class="package-title">
+                <span class="dot dot-true"></span>TRUE INSTAGRAM
+            </div>
+            <ul class="steps">
+                <li>ဖုန်းဘေ 60 ထည့်ပါ</li>
+                <li><code>*900*3515#</code> နှိပ်ပြီး စမတ်ပါ</li>
+                <li>Net Mod VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ NetMod VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
+        </div>
+
+        <div class="package true">
+            <div class="package-title">
+                <span class="dot dot-true"></span>TRUE TWITTER
+            </div>
+            <ul class="steps">
+                <li>ဖုန်းဘေ 60 ထည့်ပါ</li>
+                <li><code>*900*3509#</code> နှိပ်ပြီး စမတ်ပါ</li>
+                <li>Net Mod VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ NetMod VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
+        </div>
+
+        <div class="package true">
+            <div class="package-title">
+                <span class="dot dot-true"></span>TRUE Viber
+            </div>
+            <ul class="steps">
+                <li>ဖုန်းဘေ 60 ထည့်ပါ</li>
+                <li><code>*900*3809#</code> နှိပ်ပြီး စမတ်ပါ</li>
+                <li>Net Mod VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ NetMod VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
+        </div>
+
+        <div class="package true">
+            <div class="package-title">
+                <span class="dot dot-true"></span>TRUE VDO
+            </div>
+            <ul class="steps">
+                <li>ဖုန်းဘေ 85 ထည့်ပါ</li>
+                <li><code>*900*8234#</code> နှိပ်ပြီး စမတ်ပါ</li>
+                <li>V2BOX VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ V2BOX VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
+        </div>
+
+        <div class="package ais">
+            <div class="package-title">
+                <span class="dot dot-ais"></span>AIS 128 Kbps
+            </div>
+            <ul class="steps">
+                <li>ဖုန်းဘေ 40 ထည့်ပါ</li>
+                <li><code>*777*7068#</code> နှိပ်ပြီး စမတ်ပါ</li>
+                <li>V2BOX VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ V2BOX VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
+        </div>
+
+        <div class="package ais">
+            <div class="package-title">
+                <span class="dot dot-ais"></span>AIS 64 Kbps
+            </div>
+            <ul class="steps">
+                <li>ဖုန်းဘေ 40 ထည့်ပါ</li>
+                <li><code>*777*7067#</code> နှိပ်ပြီး စမတ်ပါ</li>
+                <li>V2BOX VPN ကို Playstore မှာဒေါင်းပါ</li>
+                <li>မိမိ နာမည် ရေးလာပေးပါ</li>
+            </ul>
+            <div class="price">✅ V2BOX VPN - 1လ 50ဘတ် ဘဏ်နဲ့လွဲ</div>
+            <button class="order-btn" onclick="orderNow()">ဝယ်ယူရန်</button>
+        </div>
+
+        <footer>
+            <p>© 2026 VPN Shop | ဝယ်ယူရန် ခလုတ်နှိပ်ပါ</p>
+        </footer>
     </div>
 
-    <div class="pkg-group-title txt-true">🔴 TRUE PACKAGES</div>
-    <div class="pkg-card">
-        <div class="pkg-info"><b>TRUE Twitter</b><span>ဖုန်းဘေ 60 ထည့်ပြီး(*900*3509#) နိပ်စမတ်ပါ</span></div>
-        <a href="tel:*900*3509%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
-    </div>
-    <div class="pkg-card">
-        <div class="pkg-info"><b>TRUE Viber</b><span>ဖုန်းဘေ 60 ထည့်ပြီး(*900*3809#) နိပ်စမတ်ပါ</span></div>
-        <a href="tel:*900*3809%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
-    </div>
-    <div class="pkg-card">
-        <div class="pkg-info"><b>TRUE INSTAGRAM</b><span>ဖုန်းဘေ 60 ထည့်ပြီး(*900*3515#) နိပ်စမတ်ပါ</span></div>
-        <a href="tel:*900*3515%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
-    </div>
-    <div class="pkg-card">
-        <div class="pkg-info"><b>TRUE ကျိုင်ဒီပကေ့</b><span>ဖုန်းဘေ 40 ထည့်ပြီးစမတ်ပါ</span></div>
-        <a href="tel:*900*8131%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
-    </div>
-    <div class="pkg-card">
-        <div class="pkg-info"><b>TRUE VDO</b><span>ဖုန်းဘေ 85 ထည့်ပြီး(*900*8234#) နိပ်စမတ်ပါ</span></div>
-        <a href="tel:*900*8234%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
-    </div>
-
-    <div class="pkg-group-title txt-ais">🟢 AIS PACKAGES</div>
-    <div class="pkg-card">
-        <div class="pkg-info"><b>AIS 128 Kpbs</b><span>ဖုန်းဘေ 40 ထည့်ပြီး(*777*7068#) နိပ်စမတ်ပါ</span></div>
-        <a href="tel:*777*7068%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
-    </div>
-    <div class="pkg-card">
-        <div class="pkg-info"><b>AIS 64 Kpbs</b><span>ဖုန်းဘေ 40 ထည့်ပြီး(*777*7067#)စမတ်ပါ</span></div>
-        <a href="tel:*777*7067%23" class="call-icon"><i class="fas fa-phone-alt"></i></a>
-    </div>
-
-    <p style="margin-top: 30px; font-size: 12px; opacity: 0.5;"> မိမိတို့ အသုံးပြုတဲ့မယ့်ကဒ် ပကေ့စမတ်ပြီးမှသာ VPNနဲ့ချိတ်သုံးလို့ရပါမယ်</p>
-</div>
-
+    <script>
+        function orderNow() {
+            // Messenger သို့ တိုက်ရိုက်သွားမည့်လင့်ခ်
+            const messengerLink = "https://m.me/TunnTunnWinnn";
+            
+            // Tab အသစ်ဖြင့် Messenger ကို ဖွင့်ပေးမည်
+            window.open(messengerLink, '_blank');
+        }
+    </script>
 </body>
-</html
+</html>
