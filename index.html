@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPN - DTAC / AIS / TRUE</title>
+    <title>VPN Shop - DTAC / AIS / TRUE</title>
     <style>
         * {
             margin: 0;
@@ -24,11 +24,23 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            text-align: center;
-            padding: 30px 20px;
+            padding: 20px; /* spacing tightens */
             border-radius: 10px;
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /* New: for logo layout */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* keep title/logo group centered */
+            gap: 20px; /* space between logo and text */
+        }
+        .header-logo {
+            max-height: 80px; /* adjust size as needed */
+            width: auto;
+            border-radius: 10px; /* subtle round */
+        }
+        .header-text {
+            text-align: left; /* text align within its group */
         }
         h1 {
             font-size: 28px;
@@ -113,13 +125,16 @@
 <body>
     <div class="container">
         <header>
-            <h1>🔵DTAC / 🟢AIS / 🔴TRUE (VPN)</h1>
-            <p>⚡ VIP 1 လ 50 ဘတ်</p>
+            <img src="https://raw.githubusercontent.com/tvpn2026-png/tvpn/refs/heads/main/20260414_155459.png" alt="VPN Shop Logo" class="header-logo">
+            <div class="header-text">
+                <h1>VPN </h1>
+                <p>စျေးနှုန်းနှင့် အသုံးပြုပုံအညွှန်း</p>
+            </div>
         </header>
 
         <div class="package dtac">
             <div class="package-title">
-                <span class="dot dot-dtac"></span>DTAC GAMING ပကေ့
+                <span classအင်တာနက်="dot dot-dtac"></span>DTAC GAMING ပကေ့
             </div>
             <ul class="steps">
                 <li>ဒီတက် App မှာ ပကေ့ဂျ် ဝင်ဝယ်ယူပါ</li>
